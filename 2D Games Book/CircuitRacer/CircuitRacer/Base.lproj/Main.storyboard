@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="w3X-br-YWT">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="CircuitRacer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PwQ-Dg-d9B">
+            <objects>
+                <viewController id="w3X-br-YWT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uoK-gA-zbS"/>
+                        <viewControllerLayoutGuide type="bottom" id="J1J-so-10M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I1y-qS-fyt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-select-car.png" translatesAutoresizingMaskIntoConstraints="NO" id="TzM-yo-yyw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsv-mf-VgB">
+                                <rect key="frame" x="35" y="285" width="121" height="169"/>
+                                <animations/>
+                                <state key="normal" image="btn-car1.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWZ-rZ-wE6">
+                                <rect key="frame" x="-129.5" y="-300" width="859" height="1200"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZWZ-rZ-wE6" secondAttribute="height" multiplier="121:169" id="UmK-ob-59N"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="btn-car2.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7k-2v-gJ1">
+                                <rect key="frame" x="445" y="285" width="121" height="169"/>
+                                <animations/>
+                                <state key="normal" image="btn-car3.png"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TzM-yo-yyw" secondAttribute="trailing" id="JLm-Hc-mMb"/>
+                            <constraint firstItem="TzM-yo-yyw" firstAttribute="top" secondItem="I1y-qS-fyt" secondAttribute="top" id="MBg-hP-4UR"/>
+                            <constraint firstItem="ZWZ-rZ-wE6" firstAttribute="centerX" secondItem="TzM-yo-yyw" secondAttribute="centerX" id="eJk-dH-GoV"/>
+                            <constraint firstItem="ZWZ-rZ-wE6" firstAttribute="centerY" secondItem="TzM-yo-yyw" secondAttribute="centerY" id="eNy-fJ-M6B"/>
+                            <constraint firstItem="TzM-yo-yyw" firstAttribute="height" secondItem="ZWZ-rZ-wE6" secondAttribute="height" multiplier="0.5" id="evt-Vr-ERC"/>
+                            <constraint firstItem="TzM-yo-yyw" firstAttribute="leading" secondItem="I1y-qS-fyt" secondAttribute="leading" id="iOw-eF-h0d"/>
+                            <constraint firstItem="J1J-so-10M" firstAttribute="top" secondItem="TzM-yo-yyw" secondAttribute="bottom" id="jmj-gf-yMD"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FjN-Vs-UyN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="-76"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg-select-car.png" width="2048" height="1536"/>
+        <image name="btn-car1.png" width="242" height="339"/>
+        <image name="btn-car2.png" width="242" height="339"/>
+        <image name="btn-car3.png" width="242" height="339"/>
+    </resources>
+</document>

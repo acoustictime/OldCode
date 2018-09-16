@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="bg-tiles" tilewidth="32" tileheight="32" spacing="2" margin="1" tilecount="11">
+  <image source="../PestControl/PestControl/Resources/Levels/tmx-bg-tiles.atlasc/tmx-bg-tiles.1.png" width="374" height="34"/>
+  <tile id="5">
+   <properties>
+    <property name="tree" value="1"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="wall" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Background" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJzFlsEOxCAIRK17sv7//3YPbUIoA4Pa9jDZiKZPBlndSin1r+1UVWMZ1zE0J79RVawOMhimx9N7Q/Fr3IB+htBaRijvVu75eXwrzgj528rd2y/4uiZP8S9/pXRdnuDrM4jO+dv11/3UT+3idxfjPsG3elfuRfMsjfItZlXsiC/nV/kf5d4X870aWDWXsVX5e///iD/DtvzP7mGUa/U/q9meQ/2XvXOtuxPdtSwn6ke2Vmgd81aJGMx6763D+oHeSSgnb703j77Fep7JA/mRrUGmtuwdG3nJ7BPVmjlDFhvxvDOV8fAAARMI6w==
+  </data>
+ </layer>
+ <layer name="Breakables" width="32" height="24">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFgxWwoeFR+0eO/eh2D7T/RwF9wGhYj4KRDkbzAPGA2LAaDdNRgA0AAIXDAKk=
+  </data>
+ </layer>
+</map>
