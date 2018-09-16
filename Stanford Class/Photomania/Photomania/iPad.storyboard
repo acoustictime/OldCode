@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12F37" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="rjj-Ag-ouB">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Flickr Photographer Map View Controller-->
+        <scene sceneID="X2f-oP-0Yt">
+            <objects>
+                <viewController id="2tI-9F-3jt" customClass="FlickrPhotographerMapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Avi-SP-Jdn">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RV8-kn-5EU"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RV8-kn-5EU" firstAttribute="bottom" secondItem="Avi-SP-Jdn" secondAttribute="bottom" type="default" id="SHr-KU-oxt"/>
+                            <constraint firstItem="RV8-kn-5EU" firstAttribute="trailing" secondItem="Avi-SP-Jdn" secondAttribute="trailing" type="default" id="SSq-ca-7v6"/>
+                            <constraint firstItem="RV8-kn-5EU" firstAttribute="top" secondItem="Avi-SP-Jdn" secondAttribute="top" type="default" id="rcM-iS-uXN"/>
+                            <constraint firstItem="RV8-kn-5EU" firstAttribute="leading" secondItem="Avi-SP-Jdn" secondAttribute="leading" type="default" id="unf-3K-f0c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8De-Os-VbW"/>
+                    <connections>
+                        <outlet property="mapView" destination="RV8-kn-5EU" id="uEL-dr-1dF"/>
+                        <segue destination="p8x-8l-Soj" kind="push" identifier="setPhotographer:" id="jWA-1S-epc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixB-oY-M9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569" y="-298"/>
+        </scene>
+        <!--Photos By Photographer Map View Controller-->
+        <scene sceneID="Ymn-Zb-HbR">
+            <objects>
+                <viewController id="p8x-8l-Soj" customClass="PhotosByPhotographerMapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5lK-Ym-eIt">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Y9w-xU-QRk"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y9w-xU-QRk" firstAttribute="bottom" secondItem="5lK-Ym-eIt" secondAttribute="bottom" type="default" id="84E-Ys-J0E"/>
+                            <constraint firstItem="Y9w-xU-QRk" firstAttribute="top" secondItem="5lK-Ym-eIt" secondAttribute="top" type="default" id="BOC-BG-PdU"/>
+                            <constraint firstItem="Y9w-xU-QRk" firstAttribute="trailing" secondItem="5lK-Ym-eIt" secondAttribute="trailing" type="default" id="Fnb-lX-VXi"/>
+                            <constraint firstItem="Y9w-xU-QRk" firstAttribute="leading" secondItem="5lK-Ym-eIt" secondAttribute="leading" type="default" id="eJa-9k-yKy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rU8-Jh-K7Q"/>
+                    <connections>
+                        <outlet property="mapView" destination="Y9w-xU-QRk" id="uBm-8s-bLe"/>
+                        <segue destination="TrL-Gu-7Gf" kind="push" identifier="setPhoto:" id="0Pc-Pe-9BA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ak-Pa-dvC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1533" y="-288"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="pb1-zw-QAW">
+            <objects>
+                <viewController id="TrL-Gu-7Gf" customClass="PhotoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UXs-a0-lLV">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5s-T2-7J9">
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="RDv-09-RtY"/>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="RDv-09-RtY" secondAttribute="trailing" constant="374" id="B71-gG-s1W"/>
+                                    <constraint firstItem="RDv-09-RtY" firstAttribute="centerX" secondItem="o5s-T2-7J9" secondAttribute="centerX" type="default" id="Y8U-UR-3e5"/>
+                                    <constraint firstItem="RDv-09-RtY" firstAttribute="top" secondItem="o5s-T2-7J9" secondAttribute="top" constant="483" id="iZc-0d-1XJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="RDv-09-RtY" secondAttribute="bottom" constant="457" id="xPY-1o-lqv"/>
+                                </constraints>
+                            </scrollView>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NrQ-xh-xDu">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" type="user" id="6q4-il-Lbc"/>
+                                    <constraint firstAttribute="width" constant="173" id="Q2a-jn-xNi"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="A3Z-3F-2Rx" kind="embed" identifier="EmbedMapOfPhoto" id="aZF-ZH-laF"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o5s-T2-7J9" firstAttribute="trailing" secondItem="UXs-a0-lLV" secondAttribute="trailing" type="default" id="6Yh-MI-zzb"/>
+                            <constraint firstItem="NrQ-xh-xDu" firstAttribute="top" secondItem="UXs-a0-lLV" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Gds-sY-BKN"/>
+                            <constraint firstItem="o5s-T2-7J9" firstAttribute="bottom" secondItem="UXs-a0-lLV" secondAttribute="bottom" type="default" id="gtW-Mi-Xj6"/>
+                            <constraint firstItem="o5s-T2-7J9" firstAttribute="leading" secondItem="UXs-a0-lLV" secondAttribute="leading" type="default" id="lrj-2a-qG1"/>
+                            <constraint firstItem="o5s-T2-7J9" firstAttribute="top" secondItem="UXs-a0-lLV" secondAttribute="top" type="default" id="nxl-lr-u0b"/>
+                            <constraint firstAttribute="trailing" secondItem="NrQ-xh-xDu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ulq-Bu-zga"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vvB-Mf-6qX"/>
+                    <connections>
+                        <outlet property="scrollView" destination="o5s-T2-7J9" id="3lY-uZ-zBu"/>
+                        <outlet property="spinner" destination="RDv-09-RtY" id="fjf-T7-FnR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ZE-hY-GcP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2401" y="-288"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Iqw-DM-eRX">
+            <objects>
+                <navigationController id="rjj-Ag-ouB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Umf-Q5-ajt">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2tI-9F-3jt" kind="relationship" relationship="rootViewController" id="iGi-yM-YeY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cyr-RY-mUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-399" y="-288"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="61Y-q5-CqV">
+            <objects>
+                <viewController id="A3Z-3F-2Rx" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gvg-iJ-jQs">
+                        <rect key="frame" x="0.0" y="0.0" width="173" height="156"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zgx-9w-6Si"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zgx-9w-6Si" firstAttribute="top" secondItem="gvg-iJ-jQs" secondAttribute="top" type="default" id="8Dm-XX-xAT"/>
+                            <constraint firstItem="zgx-9w-6Si" firstAttribute="leading" secondItem="gvg-iJ-jQs" secondAttribute="leading" type="default" id="E3j-L8-YlC"/>
+                            <constraint firstItem="zgx-9w-6Si" firstAttribute="trailing" secondItem="gvg-iJ-jQs" secondAttribute="trailing" type="default" id="NHd-3V-fFe"/>
+                            <constraint firstItem="zgx-9w-6Si" firstAttribute="bottom" secondItem="gvg-iJ-jQs" secondAttribute="bottom" type="default" id="deP-7r-fhZ"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="mapView" destination="zgx-9w-6Si" id="g0J-FK-swI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nuI-rt-3YC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3399" y="-134"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="FlickrPhotographerMapViewController" superclassName="PhotographerMapViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlickrPhotographerMapViewController.h"/>
+        </class>
+        <class className="ImageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="titleBarButtonItem" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PhotoViewController" superclassName="ImageViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PhotoViewController.h"/>
+        </class>
+        <class className="PhotographerMapViewController" superclassName="MapViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PhotographerMapViewController.h"/>
+        </class>
+        <class className="PhotosByPhotographerMapViewController" superclassName="MapViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PhotosByPhotographerMapViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
